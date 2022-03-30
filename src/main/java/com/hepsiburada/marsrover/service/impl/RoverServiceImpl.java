@@ -76,7 +76,7 @@ public class RoverServiceImpl implements RoverService {
     }
 
 
-    public void validate(Plateau plateau, int coordinateX, int coordinateY) {
+    private void validate(Plateau plateau, int coordinateX, int coordinateY) {
         Position position = plateau.getPosition();
         if (coordinateX > position.getCoordinateX() || coordinateY > position.getCoordinateY()) {
             throw new MarsRoverException("Rover coordinates must be in range of Nasa's research field!");
